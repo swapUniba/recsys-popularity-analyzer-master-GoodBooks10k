@@ -28,7 +28,7 @@ id2goodread[2817], goodread2id[105]
 np_tags = np.array(sorted([[0, "DUMMY"]] + [[goodread2id[id], " ".join(tags)] for id, tags in book_tags_dict.items()]))
 np_tags[:5]
 
-with io.open('../datasets/sample/books-tags.csv', 'w', newline='', encoding="utf-8") as f:
+with io.open('../datasets/books-tags.csv', 'w', newline='', encoding="utf-8") as f:
     f.write('item,tags\n')
     for id, tags in book_tags_dict.items():
      f.write('%d,%s \n' % (goodread2id[id], " ".join(tags)))
