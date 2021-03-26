@@ -23,11 +23,12 @@ top_n_index = round(num_of_items * top_n_percentage)
 # a plot could be produced
 most_common = ratings_counter.most_common(top_n_index)
 # removing counts from most_common
+'''
 popular_items=[]
 for x in most_common:
     popular_items.append(x[0])
-
-#popular_items = set(map(lambda x: x[0], most_common))
+'''
+popular_items = set(map(lambda x: x[0], most_common))
 
 
 print("OK")
